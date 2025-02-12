@@ -19,6 +19,14 @@ function addDownloadButton() {
     button.onclick = async () => {
         let videoUrl = window.location.href;
 
+        try {
+            let serverCheck = await fetch("http://127.0.0.1:5000/", { method: "GET" });
+            if (!serverCheck.ok) throw new Error();
+        } catch (error) {
+            alert("Error: Server isnt running.\nPlease make sure 'server.py' is running and then try again.");
+            return;
+        }
+
         let userInput = prompt("Enter the duration (e.g: 10 or 15:50):", "10:00");
         if (!userInput) return;
 
