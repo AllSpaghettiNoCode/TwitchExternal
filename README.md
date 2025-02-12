@@ -11,7 +11,7 @@ TwitchExternal is a program written in both JS (extension-side) and Python (serv
 
 - MP3 audio download (with possibly more coming soon).
 - An easy way to adjust the duration.
-- Customizible output download path (coming soon).
+- Customizible output download path.
 - 100% free and safe (only saved locally on your machine, never anywhere else).
 
 
