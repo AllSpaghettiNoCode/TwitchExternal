@@ -1,5 +1,5 @@
 
-![Logo](https://i.ibb.co/hhVnkT0/logo.png)
+![Logo](https://i.ibb.co/RZ99wzD/Scree-1.png)
 
 
 # TwitchExternal
