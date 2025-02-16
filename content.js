@@ -5,7 +5,7 @@ function addDownloadButton() {
     if (!controls) return;
 
     let button = document.createElement("button");
-    button.innerText = "Download MP3";
+    button.innerText = "Download Audio";
     button.id = "mp3-download-btn";
     button.style.position = "absolute";
     button.style.bottom = "10px";
@@ -37,12 +37,17 @@ function addDownloadButton() {
             return;
         }
 
-        console.log(`Sending request: ${totalSeconds} seconds.`);
+        let format = prompt("Enter audio format to download audio as (mp3, wav, ogg, flac):", "mp3").toLowerCase();
+        let validFormats = ["mp3", "wav", "ogg", "flac"];
+        if (!validFormats.includes(format)) {
+            alert("Invalid format!");
+            return;
+        }
 
         fetch("http:/localhost:5000/download", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ url: videoUrl, duration: totalSeconds })
+            body: JSON.stringify({ url: videoUrl, duration: totalSeconds, format: format })
         })
         .then(response => {
             if (!response.ok) throw new Error(`Server error: ${response.statusText}`);
