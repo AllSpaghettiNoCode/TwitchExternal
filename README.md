@@ -33,6 +33,8 @@ For Opera (or Opera GX):
 
 Click on the "Developer Mode" switch, this should give you access to load an unpacked extension. Navigate to the folder where you have the zip installed (should have manifest.json) and select the folder. The extension part of the installation is done.
 
+**Whenever the extension and/or server gets an update, you will need to click the "Reload" and "Update" button to make sure the latest version is implemented.**
+
 
 
 ## Installation (server)
