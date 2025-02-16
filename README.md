@@ -54,7 +54,7 @@ Thats it, now just run:
 ```python
   python .\server.py
 ```
-and find the "Download MP3" button on any video! Happy downloading!
+and find the "Download Audio" button on any video! Happy downloading!
 ## FAQ
 
 #### Is this against Twitch TOS? Will I get banned?
