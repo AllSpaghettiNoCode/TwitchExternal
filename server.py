@@ -17,19 +17,18 @@ def options():
 def download():
     data = request.json
     url = data.get("url")
-    duration = data.get("duration", 600)
+    duration = data.get("duration")
     format = data.get("format", "mp3").lower()
     valid_formats = ["mp3", "wav", "ogg", "flac"]
 
     if not url:
         print("ERROR: No URL recieved.")
         return jsonify({"error": "No URL provided"}), 400
-    if not isinstance(duration, int) or duration <= 0:
-        print("ERROR Invalid duration!", duration)
-        return jsonify({"error": "Invalid duration"}), 400
     if format not in valid_formats:
         print("ERROR: Invalid format!", format)
         return jsonify({"error": "Invalid format"}), 400
+    if duration != "full" and (not isinstance(duration, int) or duration <= 0):
+        return jsonify({"error": "Invalid duration"}), 400
 
     try:
         root = tk.Tk()
@@ -46,10 +45,11 @@ def download():
             return jsonify({"error": "No save location chosen."}), 400
         
         temp_audio_path = os.path.splitext(save_path)[0] + ".mp4"
-        
-        download_section = f"*0-{duration}"
 
-        sp.run(["yt-dlp", "-f", "bestaudio", "--download-sections", download_section, "-o", temp_audio_path, url], check=True)
+        if duration == "full":
+            sp.run(["yt-dlp", "-f", "bestaudio", "-o", temp_audio_path, url], check=True)
+        else:
+            sp.run(["yt-dlp", "-f", "bestaudio", "--download-sections", f"*0-{duration}", "-o", temp_audio_path, url], check=True)
 
         if format == "mp3":
             codec = ["-codec:a", "libmp3lame", "-b:a", "192k"]
