@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "TwitchExternal",
-    "version": "1.0",
+    "version": "1.6",
     "description": "Adds a button to the player to download Twitch videos as MP3. Must also have 'server.py'.",
     "permissions": ["activeTab", "scripting"],
     "host_permissions": ["*://*.twitch.tv/*"],
