@@ -19,22 +19,29 @@ function addDownloadButton() {
     button.onclick = async () => {
         let videoUrl = window.location.href;
 
-        let userInput = prompt("Enter the duration (e.g: 10 or 15:50):", "10:00");
+        let userInput = prompt("Enter the duration (e.g: 10 or 15:50), or type 'full' to download the full audio:", "10:00");
         if (!userInput) return;
 
-        let match = userInput.match(/^(\d+):?(\d{0,2})?$/);
-        if (!match) {
-            alert("Invalid format! Please use either MM:SS format or MM.");
-            return;
-        }
+        let totalSeconds;
+        if (userInput.toLowerCase() === "full") {
+            let confirmFull = confirm("Downloading the full audio will take a while. Do you wish to continue?");
+            if (!confirmFull) return;
+            totalSeconds = "full";
+        } else {
+            let match = userInput.match(/^(\d+):?(\d{0,2})?$/);
+            if (!match) {
+                alert("Invalid format! Please use either MM:SS format or MM.");
+                return;
+            }
 
-        let minutes = parseInt(match[1], 10);
-        let seconds = match[2] ? parseInt(match[2], 10) : 0;
-        let totalSeconds = minutes * 60 + seconds;
+            let minutes = parseInt(match[1], 10);
+            let seconds = match[2] ? parseInt(match[2], 10) : 0;
+            totalSeconds = minutes * 60 + seconds;
 
-        if (totalSeconds <= 0) {
-            alert("Duration must be greater than 0 seconds.");
-            return;
+            if (totalSeconds <= 0) {
+                alert("Duration must be more than 0 seconds!");
+                return;
+            }
         }
 
         let format = prompt("Enter audio format to download audio as (mp3, wav, ogg, flac):", "mp3").toLowerCase();
