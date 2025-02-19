@@ -1,22 +1,22 @@
 body {
-    background-color: black !important; /* Sets background to black */
-    color: white !important; /* Sets text color to white */
+    background-color: black !important;
+    color: white !important;
 }
 
 h1, h2, h3, p, label {
-    color: white !important; /* Ensures all text remains visible */
+    color: white !important;
 }
 
 input, select, button {
-    background-color: white !important; /* White background for textboxes */
-    color: black !important; /* Black text for contrast */
-    border: 1px solid #ddd; /* Light border for visibility */
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #ddd;
     padding: 5px;
     border-radius: 4px;
 }
 
 button {
-    background-color: #6441a5 !important; /* Twitch purple */
+    background-color: #6441a5 !important;
     color: white !important;
     border: none;
     padding: 8px 12px;
@@ -24,5 +24,5 @@ button {
 }
 
 button:hover {
-    background-color: #523194 !important; /* Darker purple on hover */
+    background-color: #523194 !important;
 }
