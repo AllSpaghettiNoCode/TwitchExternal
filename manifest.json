@@ -1,20 +1,20 @@
 {
-    "manifest_version": 3,
-    "name": "TwitchExternal",
+    "manifest_version": 2,
+    "name": "TwitchExternalHook",
     "version": "1.6",
-    "description": "Adds a button to the player to download Twitch videos as MP3. Must also have 'server.py'.",
-    "permissions": ["activeTab", "scripting"],
-    "host_permissions": ["*://*.twitch.tv/*"],
+    "description": "Adds download functionality to the extension. Must also have 'server.py'.",
+    "permissions": ["activeTab", "storage", "tabs"],
     "background": {
-        "service_worker": "background.js"
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
     },
     "content_scripts": [
         {
             "matches": ["*://*.twitch.tv/*"],
             "js": ["content.js"]
         }
-    ],
-    "action": {
-        "default_popup": "popup.html"
-    }
+    ]
 }
