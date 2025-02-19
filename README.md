@@ -6,6 +6,10 @@
 
 TwitchExternalHook is seperate from the main extension. This adds everything in the main branch and hooks it into the extension, which previously was just there for displaying the button. The "Download Audio" button remains the same in turns of functionality, but in future updates to this branch, it will be removed in favor of just the extension.
 
+**Due to using a lower manifest version (the main one is using 3, while this hook variant is using 2), upon loading the extension, you might get an error saying that "manifest version 2 is deprecated". This is safe to ignore, manifest version 2 is needed to implement some features into the extension.**
+
+# **For the main branch, go [here](https://github.com/DrGear/TwitchExternal).**
+
 
 ## Features
 
