@@ -1,13 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>MP3 Downloader</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>TwitchExternalHook</title>
     <style>
-        body { width: 200px; font-family: Arial, sans-serif; text-align: center; }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            text-align: center;
+            width: 220px;
+        }
+        h2 { color: #6441a5; }
+        input, select, button {
+            width: 100%;
+            margin: 5px 0;
+            padding: 8px;
+        }
+        button {
+            background: #6441a5;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <h3>Twitch MP3 Downloader</h3>
-    <p>Click the button on the video page to start the download.</p>
+    <h2>TwitchExternalHook</h2>
+    <label>Duration (example 10:00 or "full"):</label>
+    <input type="text" id="durationInput" placeholder="Enter duration">
+
+    <label>Audio format:</label>
+    <select id="formatSelect">
+        <option value="mp3">MP3</option>
+        <option value="wav">WAV</option>
+        <option value="ogg">OGG</option>
+        <option value="flac">FLAC</option>
+    </select>
+
+    <button id="downloadButton">Download</button>
+
+    <script src="popup.js"></script>
 </body>
 </html>
