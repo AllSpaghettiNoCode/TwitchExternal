@@ -1,3 +1,3 @@
 chrome.runtime.onInstalled.addListener(() => {
-    console.log("Twitch Downloader installed.");
+    console.log("TwitchExternal installed.");
 });
