@@ -1,4 +1,4 @@
-![Logo](https://i.ibb.co/V0m6xj34/Untitled-1.jpg)
+![Logo](https://i.ibb.co/ZrD1jJ3/Untitled-2.jpg)
 
 # TwitchExternalHook
 
