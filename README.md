@@ -1,7 +1,3 @@
-
-![Logo](https://i.ibb.co/RZ99wzD/Scree-1.png)
-
-
 # TwitchExternal
 
 TwitchExternal is a program written in both JS (extension-side) and Python (server-side). This extension/server combo is designed for downloading Twitch videos from any creator as an mp3, with the ability to adjust the duration of the output audio if the video is too long.
