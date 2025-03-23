@@ -1,5 +1,3 @@
-![Logo](https://i.ibb.co/ZrD1jJ3/Untitled-2.jpg)
-
 # TwitchExternalHook
 
 TwitchExternalHook is seperate from the main extension. This adds everything in the main branch and hooks it into the extension, which previously was just there for displaying the button. The "Download Audio" button remains the same in turns of functionality, but in future updates to this branch, it will be removed in favor of just the extension.
