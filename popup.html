@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MP3 Downloader</title>
+    <title>TwitchExternal</title>
     <style>
-        body { width: 200px; font-family: Arial, sans-serif; text-align: center; }
+        body { 
+            width: 200px; 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        #serverStatus {
+            padding: 5px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .enabled {
+            background-color: #43b581;
+        }
+        .disabled {
+            background-color: #f04747;
+        }
     </style>
 </head>
 <body>
-    <h3>Twitch MP3 Downloader</h3>
+    <h3>TwitchExternal</h3>
+    <div id="serverStatus">Checking server status...</div>
     <p>Click the button on the video page to start the download.</p>
+    <script src="popup.js"></script>
 </body>
 </html>
