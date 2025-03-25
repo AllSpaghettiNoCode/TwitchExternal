@@ -39,7 +39,7 @@ Click on the "Developer Mode" switch, this should give you access to load an unp
 
 Download latest release (or zip).
 
-Download Python 3.8.x (I personally use 3.8.6, but any should work).
+Download Python 3.9.x (Python 3.8 is no longer supported by yt-dlp, you must install 3.9.x to be able to get this to work).
 
 Install these packages below, this installs Flask and Flask CORS to handle cross-origin requests for Chromium browsers:
 
