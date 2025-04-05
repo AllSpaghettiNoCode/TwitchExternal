@@ -9,7 +9,7 @@ function addDownloadButton() {
     button.id = "mp3-download-btn";
     button.style.position = "absolute";
     button.style.bottom = "10px";
-    button.style.right = "10px";
+    button.style.right = "400px";
     button.style.padding = "8px 12px";
     button.style.background = "#6441a5";
     button.style.color = "white";
